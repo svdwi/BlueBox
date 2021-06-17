@@ -2,7 +2,7 @@
 
 
 
-<img src="static_BlueBox/logo.png" width=547 height=150 alt="BlueBox"/>
+<img src="logo.png" width=547 height=150 alt="BlueBox"/>
 
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/intelowlproject/IntelOwl)](https://github.com/intelowlproject/IntelOwl/releases)
