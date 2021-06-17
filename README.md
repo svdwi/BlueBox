@@ -1,4 +1,5 @@
-# BlueBox
+# BlueBox Malware analysis Box and Cyber threat intelligence
+
 
 
 <img src="static_BlueBox/logo.png" width=547 height=150 alt="BlueBox"/>
@@ -17,8 +18,7 @@
 [![Build & Tests](https://github.com/intelowlproject/IntelOwl/workflows/Build%20&%20Tests/badge.svg)](https://github.com/intelowlproject/IntelOwl/actions)
 
 
-# BlueBox Malware analysis Box and Cyber threat intelligence 
-
+# About 
 Do you want to get **threat intelligence data** about a malware, an IP or a domain? a Quick Analysis suspicious File or Malware ! 
 You are in the right place!
 
