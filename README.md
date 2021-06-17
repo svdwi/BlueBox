@@ -16,7 +16,14 @@
 # About 
  **threat intelligence data** about a malware, an IP or a domain , URL ? a Quick Analysis suspicious File or Malware ! 
 
-BlueBox is an Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain ,Url and analyze them  .
+BlueBox is an Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain ,Url and analyze them.
+
+
+## VIDEO USAGE
+
+<a href="https://drive.google.com/file/d/1FxDkz2h4jldsEU8QTL0uFaJSZFSI8XZ-/preview" title="BlueBox Usage"><img src="walpapper.png" alt="Cyber threat Hunting & Malware Analysis" /></a>
+
+
 ### Features
 
 - Provides enrichment of threat intel for malware as well as observables (IP, Domain, URL and hash).
@@ -41,7 +48,4 @@ BlueBox is an Open Source Intelligence, or OSINT solution to get threat intellig
 
 <img src="architecture.png"  alt="BlueBox"/>
 
-## USAGE
-
-<a href="https://drive.google.com/file/d/1FxDkz2h4jldsEU8QTL0uFaJSZFSI8XZ-/preview" title="BlueBox Usage"><img src="walpapper.png" alt="Cyber threat Hunting & Malware Analysis" /></a>
 
