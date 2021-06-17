@@ -32,9 +32,17 @@ BlueBox is an Open Source Intelligence, or OSINT solution to get threat intellig
 - Extract Some Features (Lexical Features) to help detection malicious website .
 - Real-time Latest ioc malware trending feeds .
 
+
+
 ## BlueBox Architecture
 
 ![Documentation Status](https://readthedocs.org/projects/intelowl/badge/?version=latest) 
 
 
 <img src="architecture.png"  alt="BlueBox"/>
+
+## USAGE
+
+<figure class="video_container">
+  <iframe src="https://drive.google.com/file/d/1FxDkz2h4jldsEU8QTL0uFaJSZFSI8XZ-/preview" width="640" height="480" allow="autoplay"></iframe>
+</figure>
