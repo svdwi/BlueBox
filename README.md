@@ -5,7 +5,7 @@
 <img src="logo.png" width=250 height=200  alt="BlueBox"/>
 
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/intelowlproject/IntelOwl)](https://github.com/intelowlproject/IntelOwl/releases)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/bluebox/svdwi)](https://github.com/intelowlproject/IntelOwl/releases)
 [![GitHub Repo stars](https://img.shields.io/github/stars/svdwi?style=social)](https://twitter.com/aziz_saadaoui)
 [![Twitter Follow](https://img.shields.io/twitter/follow/aziz_saadaoui?style=social)](https://twitter.com/intel_owl)
 [![Official Site](https://img.shields.io/badge/official-site-blue)](https://github.com/svdwi)
