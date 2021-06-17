@@ -1,4 +1,4 @@
-# BlueBox Malware analysis Box and Cyber threat intelligence
+# BlueBox Malware analysis Box and Cyber threat Hunting
 
 
 
