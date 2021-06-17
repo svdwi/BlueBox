@@ -49,4 +49,4 @@ malicious website .
 ![Documentation Status](https://readthedocs.org/projects/intelowl/badge/?version=latest) 
 
 
-<img src="architecture.png" width=547 height=150 alt="BlueBox"/>
+<img src="architecture.png"  alt="BlueBox"/>
