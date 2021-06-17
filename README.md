@@ -8,13 +8,12 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/intelowlproject/IntelOwl)](https://github.com/intelowlproject/IntelOwl/releases)
 [![GitHub Repo stars](https://img.shields.io/github/stars/svdwi?style=social)](https://twitter.com/aziz_saadaoui)
 [![Twitter Follow](https://img.shields.io/twitter/follow/aziz_saadaoui?style=social)](https://twitter.com/intel_owl)
-[![Official Site](https://img.shields.io/badge/official-site-blue)](https://intelowlproject.github.io)
+[![Official Site](https://img.shields.io/badge/official-site-blue)](https://github.com/svdwi)
 
 
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/intelowlproject/IntelOwl.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/intelowlproject/IntelOwl/context:python)
-[![CodeFactor](https://www.codefactor.io/repository/github/intelowlproject/intelowl/badge)](https://www.codefactor.io/repository/github/intelowlproject/intelowl)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Build & Tests](https://github.com/intelowlproject/IntelOwl/workflows/Build%20&%20Tests/badge.svg)](https://github.com/intelowlproject/IntelOwl/actions)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/svdwi/svdwi.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/intelowlproject/IntelOwl/context:python)
+[![CodeFactor](https://www.codefactor.io/repository/github/svdwi/bluebox/badge)](https://github.com/svdwi)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/svdwi)
 
 
 # About 
