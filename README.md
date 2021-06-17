@@ -1,7 +1,7 @@
 # BlueBox
 BlueBox Malware analysis Box and Cyber threat intelligence 
 
-<img src="static_BlueBox/logo.png" width=547 height=150 alt="Intel Owl"/>
+<img src="static_BlueBox/logo.png" width=547 height=150 alt="BlueBox"/>
 
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/intelowlproject/IntelOwl)](https://github.com/intelowlproject/IntelOwl/releases)
@@ -49,4 +49,4 @@ malicious website .
 ![Documentation Status](https://readthedocs.org/projects/intelowl/badge/?version=latest) 
 
 
-<img src="static_bluebox/architecture.png" width=547 height=150 alt="Intel Owl"/>
+<img src="architecture.png" width=547 height=150 alt="BlueBox"/>
