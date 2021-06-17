@@ -2,7 +2,7 @@
 
 
 
-<img src="logo_bluebox.png" width=500 height=200  alt="BlueBox"/>
+<img src="logo_bluebox.png" width=400 height=200  alt="BlueBox"/>
 
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/svdwi?style=social)](https://twitter.com/aziz_saadaoui)
