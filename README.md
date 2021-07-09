@@ -21,7 +21,7 @@ BlueBox is an Open Source Intelligence, or OSINT solution to get threat intellig
 
 ## VIDEO USAGE
 
-<a href="https://drive.google.com/file/d/1FxDkz2h4jldsEU8QTL0uFaJSZFSI8XZ-/preview" title="BlueBox Usage"><img src="Bluebox.png" alt="Cyber threat Hunting & Malware Analysis" /></a>
+<a href="https://drive.google.com/file/d/1FxDkz2h4jldsEU8QTL0uFaJSZFSI8XZ-/preview" title="BlueBox Usage"><img src="bluebox.png" alt="Cyber threat Hunting & Malware Analysis" /></a>
 
 
 ### Features
