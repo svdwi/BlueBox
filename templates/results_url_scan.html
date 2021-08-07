@@ -1,0 +1,267 @@
+<html lang="en">
+   {% include 'includes/head.html' %}  
+   <body>
+      <!-- [ Pre-loader ] start -->
+      <!-- [ Pre-loader ] End -->
+      <!-- [ navigation menu ] start -->
+      {% include 'includes/nav.html' %}  
+      <!-- [ navigation menu ] end -->
+      <!-- [ Header ] start -->
+      {% include 'includes/header.html' %}  
+      <!-- [ Header ] end -->
+      <!-- [ Main Content ] start -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <div class="pcoded-main-container">
+         <div class="pcoded-wrapper">
+<div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Sample Page</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="#!">Sample Page</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!-- [ sample-page ] start -->
+                                <div class="col-md-6 col-xl-12">
+                                    <div class="card theme-bg location-sale">
+                                        <div class="card-block bg-light text-center">
+                                            <i class="card-icon fas fa-check text-c-purple f-30"></i><br><br>
+
+                                            
+                                            <div class="mb-4">
+<h4 class="text-white  text-center">{{ ml['path'] }}
+</h4>                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+							 
+						
+                               
+                                <div class="col-md-6 col-xl-12">
+                                    <div class="card Active-visitor">
+                                        <div class="card-block bg-light text-center">
+                                            <i class="fas fa-bug f-30 text-c-green"></i>
+                                            <h2 class="f-w-300 mt-3">{{ ml['etat'] }}</h2>
+                                            <span class="text-muted">Machine Learning Detector </span><br><br>
+                                            
+                                            <div class="row">
+                                                
+                                                
+                                                <div class="col-md-12 col-12">
+                                                    <h4>{{ ml['score'] }}%</h4>
+                                                    <h3 class="text-muted">Score</h3>
+                                                </div>
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 col-xl-12">
+                                    <div class="card theme-bg assets-value">
+                                        <div class="bg-img"></div>
+                                        <div class="card-block bg-light  text-center">
+                                            
+                                            <div class="card-block pb-0">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Plateforms</th>
+                                                            
+                                                            
+                                                            <th>Status</th>
+                                                            <th class="text-right"></th>
+                                                    </tr></thead>
+                                                    <tbody>
+														
+														
+                                              
+												
+														
+														{% for a, b in geturltotal.items() %}
+														
+
+                                                        <tr>
+                                                            <td>
+                                                                <h6 class="m-0">{% print(a) %}</h6>
+                                                            </td>
+                                                            
+                                                            
+                                                            <td>
+																{% if b["result"] == "clean site" %}
+																
+                                                                <h6 class="m-0 text-c-green"> {% print(b["result"]) %} </h6>
+                                                                                            </td>
+                                                            <td class="text-right"><i class="fas fa-circle text-c-green f-10"></i></td>
+                                                       
+                                                                {%else%}
+															<h6 class="m-0 text-c-red"> {% print(b["result"]) %} </h6>
+                            </td>
+                                                            <td class="text-right"><i class="fas fa-circle text-c-red f-10"></i></td>
+                                                       
+                                                                {%endif%}
+                                 </tr>
+
+														{% endfor %}
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                            
+                                            
+                                            
+                                            
+
+                                            
+                                            <div class="col-md-6 col-xl-12">
+                                    <div class="card theme-bg assets-value">
+                                        <div class="bg-img"></div>
+                                        <div class="card-block bg-light  text-center">
+                                            
+                                            <div class="card-block pb-0">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Lexical Features</th>
+                                                            
+                                                            
+                                                            <th>Status</th>
+                                                            <th class="text-right"></th>
+                                                    </tr></thead>
+                                                    <tbody>
+														
+			 			
+														
+															{% for a, b in lexical_features.items() %}
+
+                                                        <tr>
+                                                            <td>
+                                                                <h6 class="m-0">{{ a }}</h6>
+                                                            </td>
+                                                            
+                                                            
+                                                            <td>
+                                                                <h6 class="m-0 text-c-green"> {{ b }}</h6>
+                                                            </td>
+                                                            
+                                                        </tr>
+
+														
+														{% endfor %}
+
+
+														
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                            
+                                            
+                                            
+                                            
+
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [ sample-page ] end -->
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      <!-- [ Main Content ] end -->
+      <!-- Warning Section Starts -->
+      <!-- Older IE warning message -->
+      <!--[if lt IE 11]>
+      <div class="ie-warning">
+         <h1>Warning!!</h1>
+         <p>You are using an outdated version of Internet Explorer, please upgrade
+            <br/>to any of the following web browsers to access this website.
+         </p>
+         <div class="iew-container">
+            <ul class="iew-download">
+               <li>
+                  <a href="http://www.google.com/chrome/">
+                     <img src="static/images/browser/chrome.png" alt="Chrome">
+                     <div>Chrome</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://www.mozilla.org/en-US/firefox/new/">
+                     <img src="static/images/browser/firefox.png" alt="Firefox">
+                     <div>Firefox</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://www.opera.com">
+                     <img src="static/images/browser/opera.png" alt="Opera">
+                     <div>Opera</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://www.apple.com/safari/">
+                     <img src="static/images/browser/safari.png" alt="Safari">
+                     <div>Safari</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                     <img src="static/images/browser/ie.png" alt="">
+                     <div>IE (11 & above)</div>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <p>Sorry for the inconvenience!</p>
+      </div>
+      <![endif]-->
+      <!-- Warning Section Ends -->
+      <!-- Required Js -->
+      <script src="static/js/vendor-all.min.js"></script>
+      <script src="static/plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="static/js/pcoded.min.js"></script>
+      <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/plugins/prism/js/prism.min.js"></script>
+     <!--  <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/plugins/fileupload/js/dropzone-amd-module.min.js"></script>-->
+   </body>
+</html>

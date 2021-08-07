@@ -1,0 +1,462 @@
+<html lang="en">
+   {% include 'includes/head.html' %}  
+   <body>
+      <!-- [ Pre-loader ] start -->
+      <!-- [ Pre-loader ] End -->
+      <!-- [ navigation menu ] start -->
+      {% include 'includes/nav.html' %}  
+      <!-- [ navigation menu ] end -->
+      <!-- [ Header ] start -->
+      {% include 'includes/header.html' %}  
+      <!-- [ Header ] end -->
+      <!-- [ Main Content ] start -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <div class="pcoded-main-container">
+         <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+               <div class="pcoded-inner-content">
+                  <!-- [ breadcrumb ] start -->
+                  <div class="page-header">
+                     <div class="page-block">
+                        <div class="row align-items-center">
+                           <div class="col-md-12">
+<h4 class="mt-4">  Scans Management    </h4>            <hr>  <br>             
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- [ breadcrumb ] end -->
+                  <div class="main-body">
+                     <div class="page-wrapper">
+                        <!-- [ Main Content ] start -->
+                        <div class="row">
+                           <!-- [ tabs ] start -->
+                           <div class="col-sm-12">
+                            
+                              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                 <li class="col-6 nav-item">
+                                    <a id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false" class="nav-link danger">Observable Scan</a>
+                                 </li>
+                                 <li class="col-6 nav-item">
+                                    <a class="nav-link active show" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="true">File Scan</a>
+                                 </li>
+                              </ul>
+                              <div class="tab-content" id="pills-tabContent">
+                                 <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <div class="row">
+                                       <div class="col-sm-12">
+                                          <div class="card">
+
+
+
+
+                                             
+                                             <div class="card-header">
+                                                <h5> <i class="feather icon-search f-20 text-c-blue"></i> OBSERVABLE SCAN </h5>
+                                             </div>
+                                             <div class="card-body">
+                                                
+                                                <div class="row">
+                                                  <!-- <div class="col-md-12">
+                                                      <div class="col-md-12">
+                                                         <div class="row">
+                                                            <div class="col-2">
+                                                               <div class="custom-control custom-radio">
+                                                                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" id="ip">
+                                                                  <label class="custom-control-label" for="customRadio1">ip</label>
+                                                               </div>
+                                                            </div>
+                                                            <div class="col-2">
+                                                               <div class="custom-control custom-radio">
+                                                                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input"id="domain">
+                                                                  <label class="custom-control-label" for="customRadio2">domain</label>
+                                                               </div>
+                                                            </div>
+                                                            <div class="col-2">
+                                                               <div class="custom-control custom-radio">
+                                                                  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" id="url">
+                                                                  <label class="custom-control-label" for="customRadio3">url</label>
+                                                               </div>
+                                                            </div>
+                                                            <div class="col-2">
+                                                               <div class="custom-control custom-radio">
+                                                                  <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input" id="hash" >
+                                                                  <label class="custom-control-label" for="customRadio4">hash</label>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                      <script type="text/javascript" language="javascript">
+                                                         if($.trim($('#boxinput').val()) == ''){
+                                                         
+                                                         	 $('#smallchange').html('<small id="boxhelp" class="form-text text-muted">hello </small>');
+                                                         				   
+                                                            }
+                                                         
+                                                         $("#customRadio1").click();
+                                                         
+                                                         $("#customRadio1").click(function() {
+                                                         
+                                                               if(this.checked){
+                                                                            $("#labelchange").html("Enter Ip To Scan");
+                                                          $("#boxinput").attr("placeholder", "8.8.8.8");
+                                                               }
+                                                          });
+                                                         
+                                                         
+                                                         $("#customRadio2").click(function() {
+                                                         
+                                                               if(this.checked){
+                                                                           $("#labelchange").text("Enter Dns/Domain To Scan");
+                                                           $("#boxinput").attr("placeholder", "svdwi.com");
+                                                               }
+                                                          });
+                                                         
+                                                         
+                                                         
+                                                         $("#customRadio3").click(function() {
+                                                         
+                                                               if(this.checked){
+                                                                            $("#labelchange").text("Enter Url To Scan ");
+                                                           $("#boxinput").attr("placeholder", "http://exemple.com/");
+                                                               }
+                                                          });
+                                                         
+                                                         $("#customRadio4").click(function() {
+                                                         
+                                                               if(this.checked){
+                                                                       $("#labelchange").text("Enter Hash To Scan ");
+                                                           $("#boxinput").attr("placeholder", "fed666b39ce471f8d12138c1b4313078");
+                                                               }
+                                                          });
+                                                         
+                                                         
+                                                         
+                                                      </script>										   
+                                                   </div>-->
+                                                </div>
+                                                <div class="row">
+                                                   <div class="col-md-12">
+                                                      <form method="POST" action="/url">
+                                                         <div class="form-group">
+                                                            <label id="labelchange" for="exampleInputEmail1">Enter Url/Domain To Scan</label>
+                                                            <input type="text" id="boxinput" name="urladdress" class="form-control"  placeholder="www.exemple.com ">
+                                                            <h6 id='smallchange'>   </h6>
+                                                         </div>
+                                                         <div class="form-group">
+                                                            <label for="exampleInputPassword1">Select Analyzers</label>
+                                                            <select id="analyze_type" class="mb-1 form-control">
+                                                               <option>Analyzers To Request</option>
+                                                               	<option>Select_All methods</option>
+                                                    <!-- <option>Machine_Learning_Detection</option>
+                                                               <option>lexical_Analysis</option>
+                                                               <option>Externel_Services</option> -->
+                                                            </select>
+                                                            <small style="color:pink" class=" form-text 
+                                                               ">either you specify a list of requested analyzers or the 'run_all_available_analyzers' parameter, not both.
+                                                            </small>
+                                                         </div>
+<!--                                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                            <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+                                                         </div>
+                                                        -->
+                                                         <hr>
+                                                       <!--  <button type="button" id="btn"class="btn btn  btn-primary"> Start </button>  -->     
+                                                         <input type="submit" value="start scan" class="btn btn-primary">
+                                                      </form>
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                      
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                           <!--Input group -->
+                                       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                 </div>
+                                 <div class="tab-pane fade active show" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                    <div class="row">
+                                       <div class="col-sm-12">
+                                          <div class="card">
+                                             <div class="card-header">
+                                                <h5> <i class="feather icon-file f-20 text-c-blue"></i> File Scan </h5>
+                                             </div>
+                                             <div class="card-body">
+                                                <div class="row">
+                                                  
+												   
+												   
+												   <div class="col-md-6">
+                                                          <div class="form-group">
+                                                       <label for="exampleInputEmail1">Select File</label>
+													   <br>
+                                                         <button  id="fileup" type="button" style="width:100%" class="btn btn-dark" > Upload File </button>
+                                                        
+
+													 </div>
+                                                    </div>
+												   
+												   
+                                                   <script type="text/javascript" language="javascript">
+                                                   
+                                                   $('#fileup').click(function() {
+                                                   
+                                                   $("#uploadnow").click();
+
+                                                   });
+                                                
+
+                                                         </script>
+                                                   
+
+                                                   <form   style="display: none;" id="formId" action="/file" method="POST" enctype="multipart/form-data">
+           
+             
+                                                      <div class="form-group files color">
+                                                        <input  id="uploadnow" type="file" name="file" class="form-control" multiple="">
+                                                        <input type="submit" id="upload"value="Upload" name="submit">
+                                                      </div>
+                                                      
+                                                    
+                                                  </form>
+
+                                            
+
+
+												   
+				 
+                                               
+                                                   <div class="col-md-6">
+                                                         <div class="form-group">
+                                                            <label>File Name</label>
+                                                            <input type="text" id="file_name" class="form-control" placeholder="" disabled  >
+                                                         </div>
+                                                   </div>
+                                                </div>
+                                                <div class="form-group">
+                                                   <label for="exampleInputPassword1">Select Analyzers</label>
+                                                   <select  id="analyze_type" class="mb-1 form-control">
+                                                      <option>Analyzers To Request</option>
+													<option>Select_All methods</option>
+                                                    <!--  <option>PeScan_static Analysis</option>
+                                                      <option>FileInfo</option>
+                                                      <option>EXternel_Services</option>
+                                                      <option>Yara_rules_Scan </option>
+                                                      <option>Extract_Strings</option>
+                                                      <option>HybridAnalysis_Get_File_Hash </option>
+                                                      <option>Signateur_Extract</option> -->
+                                                   </select>
+                                                   <small style="color:pink" class=" form-text 
+                                                      ">either you specify a list of requested analyzers or the 'run_all_available_analyzers' parameter, not both.
+                                                   </small>
+                                                </div>
+                                                <h4> <span class="btn btn-primary"> Custom Analyzers Configuration </span></h4>
+                                                <div class="custom-control custom-checkbox">
+                                                   <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                   <label class="custom-control-label" for="customCheck1">Force Privacy Scan</label>
+                                                </div>
+                                                
+                                                <hr>
+                                                <input type="submit" id="home" value="Start Scan"class="btn btn-light">      
+                                                <script type="text/javascript" language="javascript">
+                                                   if ($("#ip").prop("checked")) {
+                                                   $("#labelchange").html("Enter Ip To Scan");
+                                                   $("#boxinput").attr("placeholder", "8.8.8.8");
+                                                   
+                                                   }
+                                                    if ($("#domain").prop("checked")) {
+                                                   $("#labelchange").text("Enter Dns/Domain");
+                                                    $("#boxinput").attr("placeholder", "svdwi.com");
+                                                   
+                                                   }
+                                                    if ($("#url").prop("checked")) {
+                                                   $("#labelchange").text("Enter Url ");
+                                                    $("#boxinput").attr("placeholder", "http://svdwi.com/file.exe");
+                                                   
+                                                   }
+                                                     if ($("#hash").prop("checked")) {
+                                                   $("#labelchange").text("Enter Hash(md5,sha251) ");
+                                                    $("#boxinput").attr("placeholder", "8.8.8.8");
+                                                   
+                                                   }
+                                                </script>
+
+
+
+                                                <script type="text/javascript" language="javascript">
+
+
+                                                   $('input[type="file"]').change(function(e) {
+                                                      var fileName = e.target.files[0].name;
+                                                      console.log('The file "' + fileName + '" has been selected.');
+                                                      $("#file_name").val(fileName)
+                                                   });
+
+		
+                                                $('#home').click(function() {
+                                                   
+                                                      $("#upload").click();
+                                                   
+                                                      var qurl = "/hell";
+                                                      $.ajax({
+                                                          type: "POST",
+                                                          cache: false,
+                                                          url: qurl,
+                                                          data: JSON.stringify({
+                                                              file_name: $("#file_name").val(),
+                                                              analyze_type: $("#analyze_type").val()
+                                                          }),
+                                                          dataType: "json",
+                                                          contentType: "application/json",
+                                                          Accept: 'application/json; charset=utf-8',
+                                                          success: function(data) {
+                                                             // console.log(data);
+                                                          },
+                                                          error: function(jqXHR) {
+                                                             // alert("error: " + jqXHR.status);
+                                                            //  console.log(jqXHR);
+                                                          }
+                                                      })
+                                                   }); 
+                           
+                           
+                                                </script>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- [ tabs ] end 
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                                                $('#home').click(function() {
+                                                   
+                                                      $("#upload").click();
+                                                   
+                                                      var qurl = "/hell";
+                                                      $.ajax({
+                                                          type: "POST",
+                                                          cache: false,
+                                                          url: qurl,
+                                                          data: JSON.stringify({
+                                                              file_name: $("#file_name").val(),
+                                                              analyze_type: $("#analyze_type").val()
+                                                          }),
+                                                          dataType: "json",
+                                                          contentType: "application/json",
+                                                          Accept: 'application/json; charset=utf-8',
+                                                          success: function(data) {
+                                                              console.log(data);
+                                                          },
+                                                          error: function(jqXHR) {
+                                                              alert("error: " + jqXHR.status);
+                                                              console.log(jqXHR);
+                                                          }
+                                                      })
+                                                   }); 
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           -->
+                        </div>
+                        <!-- [ Main Content ] end -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- [ Main Content ] end -->
+      <!-- Warning Section Starts -->
+      <!-- Older IE warning message -->
+      <!--[if lt IE 11]>
+      <div class="ie-warning">
+         <h1>Warning!!</h1>
+         <p>You are using an outdated version of Internet Explorer, please upgrade
+            <br/>to any of the following web browsers to access this website.
+         </p>
+         <div class="iew-container">
+            <ul class="iew-download">
+               <li>
+                  <a href="http://www.google.com/chrome/">
+                     <img src="static/images/browser/chrome.png" alt="Chrome">
+                     <div>Chrome</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://www.mozilla.org/en-US/firefox/new/">
+                     <img src="static/images/browser/firefox.png" alt="Firefox">
+                     <div>Firefox</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://www.opera.com">
+                     <img src="static/images/browser/opera.png" alt="Opera">
+                     <div>Opera</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://www.apple.com/safari/">
+                     <img src="static/images/browser/safari.png" alt="Safari">
+                     <div>Safari</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                     <img src="static/images/browser/ie.png" alt="">
+                     <div>IE (11 & above)</div>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <p>Sorry for the inconvenience!</p>
+      </div>
+      <![endif]-->
+      <!-- Warning Section Ends -->
+      <!-- Required Js -->
+      <script src="static/js/vendor-all.min.js"></script>
+      <script src="static/plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="static/js/pcoded.min.js"></script>
+      <!-- <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/plugins/prism/js/prism.min.js"></script>
+      <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/plugins/fileupload/js/dropzone-amd-module.min.js"></script>
+     <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/js/menu-setting.min.js"></script> -->
+   
+      
+   
+   </body>
+</html>

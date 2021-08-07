@@ -1,0 +1,219 @@
+<html lang="en">
+   {% include 'includes/head.html' %}  
+   <body>
+      <!-- [ Pre-loader ] start -->
+      <!-- [ Pre-loader ] End -->
+      <!-- [ navigation menu ] start -->
+      {% include 'includes/nav.html' %}  
+      <!-- [ navigation menu ] end -->
+      <!-- [ Header ] start -->
+      {% include 'includes/header.html' %}  
+      <!-- [ Header ] end -->
+      <!-- [ Main Content ] start -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <div class="pcoded-main-container">
+         <div class="pcoded-wrapper">
+<div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Latest Feeds</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="#!">Latest Feeds</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!-- [ sample-page ] start -->
+                            <div class="col-sm-12">
+   <div class="card bg-light">
+      <div class="card-header bg-light">
+         <h5>Threat Intelligence Feeds</h5>
+      </div>
+      <div class="card-block">
+         <div class="table-responsive">
+            <div id="zero-configuration_wrapper" class="dataTables_wrapper dt-bootstrap4">
+               <div class="row">
+         
+                   
+               </div>
+			   
+			   
+			   
+               <div class="row">
+                  <div class="col-sm-12">
+                     <table id="myTable" class="display table nowrap table-striped table-hover dataTable" style="width: 100%;" role="grid" aria-describedby="zero-configuration_info">
+                        <thead>
+                           <tr role="row">
+						    
+
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 97px;">first_seen</th>
+
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 297px;">id</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 297px;">ioc</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 145px;">threat_type</th>							
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 297px;">threat_type_desc</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 145px;">ioc_type</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 70px;">ioc_type_desc</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 138px;">malware</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 97px;">malware_printable</th>
+
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 97px;">malware_alias</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 97px;">malware_malpedia</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 97px;">confidence_level</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 97px;">first_seen</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 97px;">last_seen</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 97px;">reporter</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 97px;">reference</th>
+																			<th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 97px;">tags</th>
+																			</tr>
+																									</thead>
+																									<tbody>
+																									
+								{% for i in range(feed|length): %}
+																							
+                           <tr role="row" class="odd">
+							 <td>{{feed[i]["first_seen"]}}</td>
+                              <td>{{feed[i]["id"]}}</td>
+                              <td>{{feed[i]["ioc"]}}</td>
+                              <td>{{feed[i]["threat_type"]}}</td>
+                              <td>{{feed[i]["threat_type_desc"]}}</td>
+                              <td>{{feed[i]["ioc_type"]}}</td>
+                              <td>{{feed[i]["ioc_type_desc"]}}</td>
+                              <td>{{feed[i]["malware"]}}</td>
+                              <td>{{feed[i]["malware_printable"]}}</td>
+                              <td>{{feed[i]["malware_alias"]}}</td>
+                              <td>{{feed[i]["malware_malpedia"]}}</td>
+                              <td>{{feed[i]["confidence_level"]}}</td>
+                              <td>{{feed[i]["first_seen"]}}</td>
+                              <td>{{feed[i]["last_seen"]}}</td>
+                              <td>{{feed[i]["reporter"]}}</td>
+                              <td>{{feed[i]["reference"]}}</td>
+                              <td>{{feed[i]["tags"]}}</td>
+              
+                           </tr>
+                        
+             {% endfor %}                    
+                        </tbody>
+                        <tfoot>
+                           <tr>
+                              <th rowspan="1" colspan="1">ioc</th>
+                              <th rowspan="1" colspan="1">threat_type</th>
+                              <th rowspan="1" colspan="1">threat_type_desc</th>
+                              <th rowspan="1" colspan="1">ioc_type_desc</th>
+                              <th rowspan="1" colspan="1">malware</th>
+                              <th rowspan="1" colspan="1">malware_printable</th>   
+							  <th rowspan="1" colspan="1">first_seen</th>   
+							  <th rowspan="1" colspan="1">tags</th>
+                           </tr>
+                        </tfoot>
+                     </table>
+                  </div>
+               </div>
+			   
+			   
+			   
+<script>
+    $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+    </script>
+			   
+               <div class="row">
+                  
+                  <div class="col-sm-12 col-md-7">
+                     <div class="dataTables_paginate paging_simple_numbers" id="zero-configuration_paginate">
+                      
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+								
+								
+								
+								
+								
+							 
+                                <!-- [ sample-page ] end -->
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      <!-- [ Main Content ] end -->
+      <!-- Warning Section Starts -->
+      <!-- Older IE warning message -->
+      <!--[if lt IE 11]>
+      <div class="ie-warning">
+         <h1>Warning!!</h1>
+         <p>You are using an outdated version of Internet Explorer, please upgrade
+            <br/>to any of the following web browsers to access this website.
+         </p>
+         <div class="iew-container">
+            <ul class="iew-download">
+               <li>
+                  <a href="http://www.google.com/chrome/">
+                     <img src="static/images/browser/chrome.png" alt="Chrome">
+                     <div>Chrome</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://www.mozilla.org/en-US/firefox/new/">
+                     <img src="static/images/browser/firefox.png" alt="Firefox">
+                     <div>Firefox</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://www.opera.com">
+                     <img src="static/images/browser/opera.png" alt="Opera">
+                     <div>Opera</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://www.apple.com/safari/">
+                     <img src="static/images/browser/safari.png" alt="Safari">
+                     <div>Safari</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                     <img src="static/images/browser/ie.png" alt="">
+                     <div>IE (11 & above)</div>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <p>Sorry for the inconvenience!</p>
+      </div>
+      <![endif]-->
+      <!-- Warning Section Ends -->
+      <!-- Required Js -->
+      <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/js/vendor-all.min.js"></script>
+      <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="static/js/pcoded.min.js"></script>
+  
+      <!-- datatable Js -->
+      <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/plugins/data-tables/js/datatables.min.js"></script>
+      <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/js/pages/tbl-datatable-custom.js"></script>
+  
+  </body>   </body>
+</html>

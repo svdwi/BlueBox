@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'includes/head.html' %}  
+   <body>
+      <!-- [ Pre-loader ] start -->
+      <!-- [ Pre-loader ] End -->
+      <!-- [ navigation menu ] start -->
+      {% include 'includes/nav.html' %}  
+      <!-- [ navigation menu ] end -->
+      <!-- [ Header ] start -->
+      {% include 'includes/header.html' %}  
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Profile Settings</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">Profile </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+             <div class="row">
+                               <div class="col-xl-4 col-md-6">
+                                   <div class="card bg-light">
+                <div class="card bg-light">
+                                        <div class="card-block">
+                                            <div class="row align-items-center justify-content-center">
+                                                <div class="col-auto">
+                                                    <img class="img-fluid rounded-circle" style="width:70px;" src="static/images/user/avatar-2.jpg" alt="dashboard-user">
+                                                </div>
+                                                <div class="col">
+                                                    <h5>{{ current_user.username }}</h5>
+                                                    <span>Admin</span>
+                                                </div>
+                                            </div>
+                                            <ul class="task-list">
+                                                <li>
+                                                    <i class="task-icon bg-c-green"></i>
+                                                    <h6>Username :</h6>
+                                                    <p class="text-muted">{{ current_user.username }}</p>
+                                                </li>
+                                                <li>
+                                                    <i class="task-icon bg-c-green"></i>
+                                                    <h6>Email :</h6>
+                                                    <p class="text-muted">{{ current_user.email }}</p>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+            </div>
+                                </div>
+    
+    
+    
+    
+    
+    
+    
+    <div class="col-xl-8 col-md-6">
+                               <div class="card bg-light">
+                                        <div class="card-header">
+                                            <h5>Profile Settings</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <form   action="/profile" method="POST" >
+                                                <div class="row">
+                                                     <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Email</label>
+                                                            <input type="text" class="form-control" name="email" placeholder="Email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Old password</label>
+                                                            <input type="password" class="form-control" name="old-password" placeholder="Password">
+                                                        </div>
+                                                    </div>
+													<div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="form-label">New Password</label>
+                                                            <input type="password" class="form-control" name="new-password" placeholder="Password">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Confirm password</label>
+                                                            <input type="password" class="form-control" name="confirm-password" placeholder="Confirm password">
+                                                        </div>
+                                                    </div>
+                                              
+                                                 
+                                                   
+                                                    <div class="col-md-6">
+                                                        
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        
+                                                    </div>
+                                                    
+                                                    <div class="col-md-6">
+                                                        
+                                                    </div>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                </div>
+<hr> 
+                                                <input type="submit" class="btn btn-outline-light" value="Save Change" />                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+    
+    
+    
+    
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+    <!-- Warning Section Starts -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+        <div class="ie-warning">
+            <h1>Warning!!</h1>
+            <p>You are using an outdated version of Internet Explorer, please upgrade
+               <br/>to any of the following web browsers to access this website.
+            </p>
+            <div class="iew-container">
+                <ul class="iew-download">
+                    <li>
+                        <a href="http://www.google.com/chrome/">
+                            <img src="assets/images/browser/chrome.png" alt="Chrome">
+                            <div>Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <img src="assets/images/browser/firefox.png" alt="Firefox">
+                            <div>Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com">
+                            <img src="assets/images/browser/opera.png" alt="Opera">
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.apple.com/safari/">
+                            <img src="assets/images/browser/safari.png" alt="Safari">
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="assets/images/browser/ie.png" alt="">
+                            <div>IE (11 & above)</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sorry for the inconvenience!</p>
+        </div>
+    <![endif]-->
+    <!-- Warning Section Ends -->
+
+    <!-- Required Js -->
+<script src="assets/js/vendor-all.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+    <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/js/menu-setting.min.js"></script>
+
+
+</body>
+</html>

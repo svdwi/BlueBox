@@ -1,0 +1,499 @@
+<html lang="en">
+   {% include 'includes/head.html' %}  
+   <body>
+      <!-- [ Pre-loader ] start -->
+      <!-- [ Pre-loader ] End -->
+      <!-- [ navigation menu ] start -->
+      {% include 'includes/nav.html' %}  
+      <!-- [ navigation menu ] end -->
+      <!-- [ Header ] start -->
+      {% include 'includes/header.html' %}  
+      <!-- [ Header ] end -->
+      <!-- [ Main Content ] start -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <div class="pcoded-main-container">
+         <div class="pcoded-wrapper">
+<div class="pcoded-content">
+               <div class="pcoded-inner-content">
+                  <!-- [ breadcrumb ] start -->
+                  <div class="page-header">
+                     <div class="page-block">
+                        <div class="row align-items-center">
+                           <div class="col-md-12">
+                              <div class="page-header-title">
+                                 <h5 class="m-b-10">Results File scan</h5>
+                              </div>
+                              <ul class="breadcrumb">
+                                 <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                 <li class="breadcrumb-item"><a href="#!">Results File Scan </a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- [ breadcrumb ] end -->
+                  <div class="main-body">
+                     <div class="page-wrapper">
+                        <!-- [ Main Content ] start    -->
+                        <div class="row">   <!-- <div class="col-12"><div class="alert alert-success" role="alert">
+                                              No security vendors flagged this file as malicious
+    </div></div><div class="col-12">
+		<div class="alert alert-danger" role="alert">
+ security vendors flagged this file as malicious    </div>
+ 
+ 
+ </div>   -->
+                        <!-- [ sample-page ] start -->
+                        
+                        
+						{% if detected %}
+						<div class="col-12">
+						<div class="alert alert-success" role="alert">
+						No Security Vendors flagged this file as malicious 
+						</div>
+						{%else%}
+						<div class="col-12">
+						<div class="alert alert-danger" role="alert">
+						 Security Vendors flagged this file as malicious 
+						</div>
+						{% endif%}
+
+                        </div>
+                           <div class="col-md-6 col-xl-4">
+                              <div class="card bg-light Active-visitor">
+                                 <div class="card-block text-center">
+									 {% if detected %}
+                                    <div data-label="30%" class="radial-bar radial-bar-80 radial-bar-lg radial-bar-success"></div>
+                                    <br>
+                              
+                                   <span class="text"> No Malware Detected </span> 
+                                   {%else%}
+                                     <div data-label="30%" class="radial-bar radial-bar-80 radial-bar-lg radial-bar-danger"></div>
+                                    <br>
+                                   <span class="text">  Malware Detected </span> 
+                                    {% endif%}
+                                    <div class="progress mt-4 m-b-40">
+                                       <div class="progress-bar progress-c-theme" role="progressbar" style="width: 75%; height:7px;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="row card-active">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-xl-8 col-md-12">
+                              <div class="card bg-light">
+                                 <div class="card-header">
+                                    <h5>DETAILS</h5>
+                                    <div class="card-header-right">
+                                       <div class="btn-group card-option">
+                                          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <i class="feather icon-more-horizontal"></i>
+                                          </button>
+                                          <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                             <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                             <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                             <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                             <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="card-body">
+                                    <div class="card-block task-attachment">
+                                       <ul class="media-list p-0">
+                                          <li class="media d-flex m-b-15">
+                                             <div class="m-r-20 file-attach">
+                                                <i class="far fa-file f-28 text-muted"></i>
+                                             </div>
+                                             <div class="media-body">
+                                                <a href="#!" class="m-b-5 d-block text-secondary">{{filename}}
+                                                </a>
+                                                <div class="text-muted">
+                                                   <span>Size: {{filesize}} bytes </span>
+                                                   <span>
+                                                   Added by <a href="#!" class="text-secondary">{{ current_user.username }}</a>
+                                                   </span>
+                                                </div>
+                                                <div class="text-muted">
+                                                   <span>{{ Hashes_Data.values()[0] }}
+                                                   </span>
+                                                </div>
+                                             </div>
+                                             <div class="float-right text-muted">
+                                                <i class="fas fa-download f-18"></i>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                    <div class="leads-progress mt-3">
+                                    </div>
+                                    <br>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="card bg-light">
+                                 <div class="card-header">
+                                    <h5>Basic Properties</h5>
+                                 </div>
+                                 <div class="card-body">
+                                    <dl class="dl-horizontal row">
+
+                                       {% for hashes, value in Hashes_Data.items() %}
+
+                                       <dt class="col-sm-3">{% print(hashes)%}</dt>
+                                       <dd class="col-sm-9">{% print( value ) %}</dd>
+
+                                       {% endfor %}
+
+
+                                                                          </dl>
+                                 </div>
+                              </div>
+                           </div>
+                          
+                           
+                           
+                           
+                                           <div class="col-md-12">
+                              <div class="card bg-light">
+                                 <div class="card-header">
+                                    <h5>Basic Properties</h5>
+                                 </div>
+                                 <div class="card-body">
+                                    <dl class="dl-horizontal row">
+
+                                       {% for a, b in peinfo.items() %}
+
+                                       <dt class="col-sm-3">{% print(a)%}</dt>
+                                  
+                                       <dd class="col-sm-9">{% print(b) %}</dd>
+						
+                                       {% endfor %}
+
+
+                                                                          </dl>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                                             <div class="col-md-12">
+                              <div class="card  bg-light">
+                                 <div class="card-header">
+                                    <h5>Yara Detect</h5>
+                                 </div>
+                                 <div class="card-body"><div class="card-block text-center"><i class=" fas fa-cogs f-50 text-c-red"></i><br>
+                                            <br><h5 class="mb-3">Yara Rules Detection
+
+</h5>
+    </div>                  <dl class="dl-horizontal row">
+
+                        {% for hashes, value in yaradetect.items() %}
+
+                        <dt class="col-sm-3">{% print(hashes)%}</dt>
+                        <dd class="col-sm-9">{% print( value ) %}</dd>
+
+                        {% endfor %}
+
+                                       
+
+                                       
+
+
+                                                                          </dl>
+                                 </div>
+                              </div>
+                           </div>
+
+                           
+                           
+                           
+                           
+                           
+                           
+                                            
+                                             <div class="col-md-12">
+                              <div class="card  bg-light">
+                                 <div class="card-header">
+                                    <h5>Signature Info</h5>
+                                 </div>
+                                 <div class="card-body"><div class="card-block text-center"><i class="fas  fa-check-circle f-50 text-c-green"></i><br>
+                                            <br><h5 class="mb-3">Signature Verification
+
+</h5>
+    </div>                  <dl class="dl-horizontal row">
+
+                   {% for a,b in signaa.items() %}
+      <dt class="col-sm-3">  {{a}} </dt>
+      <dt class="col-sm-9">  {{b}} </dt>
+      {% endfor %}
+
+                                       
+
+
+                                                                          </dl>
+                                 </div>
+                              </div>
+                           </div>
+
+                           
+                           
+                           
+                           
+                           
+                     
+						<div class="col-md-12">
+                              <div class="card bg-light to-do">
+                                 <div class="card-header">
+                                    <h5>Extract IP/DNS/Emails
+
+</h5>
+                                    <div class="card-header-right">
+                                       <div class="btn-group card-option">
+                                          <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                             <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                             <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                             <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                             <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="card bg-light">
+                                        <div class="card-block note-card">
+                                            <div class="note-box-wrapper row">
+                                                
+                                                <div style="" class="note-box-content col-lg-12 col-xl-12">
+                                                    
+                                                    <div class="note-body">
+                                                        <div class="note-write">
+                                                            <textarea id="Note-pad" class="form-control" placeholder="Extracted Strings
+" rows="3"> {{email}} 
+{{ip}}
+  </textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              </div>
+</div>
+
+                           </div>
+                           <div class="col-xl-12 col-md-12">
+                              <div class="card bg-light to-do">
+                                 <div class="card-header">
+                                    <h5>Extracted Strings
+
+</h5>
+                                    <div class="card-header-right">
+                                       <div class="btn-group card-option">
+                                          <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                             <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                             <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                             <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                             <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="card bg-light">
+                                        <div class="card-block note-card">
+                                            <div class="note-box-wrapper row">
+                                                
+                                                <div style="" class="note-box-content col-lg-12 col-xl-9">
+                                                    
+                                                    <div class="note-body">
+                                                        <div class="note-write">
+                                                            <textarea id="Note-pad" class="form-control" placeholder="Extracted Strings
+" rows="13">   {{strings}}  </textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                              </div>
+                           </div>
+
+         
+
+                           <div class="col-xl-12 col-md-12">
+                              <div class="card bg-light to-do">
+                                 <div class="card-header">
+                                    <h5>Suspicious Api Calls </h5>
+                                    <div class="card-header-right">
+                                       <div class="btn-group card-option">
+                                          <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                             <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                             <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                             <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                             <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="card-block">
+                                    <div class="row">
+
+                                  
+                                            
+
+                                          {% for calls_name in calls %}
+
+                                       <div class="col-sm-12 m-b-20">
+                                          <div class="widget-todo">
+                                             <div class="media">
+                                                <div class="mr-3 photo-table">
+                                                   <i class="fas  fa-bug text-c-red f-20 mr-2"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                   <h6 class="d-inline-block">{{ calls_name }} </h6>
+                                                   <p class="m-b-0 text-muted"> </p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       {% endfor %}
+
+                                      
+                                       
+                                       
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><div class="col-sm-12">
+                                    <div class="card bg-light " style="height:70%">
+                                        <div class="card-header">
+                                            <h5>Generate Yara Rules For Malware</h5>
+                                            <div class="card-header-right">
+                                                <div class="btn-group card-option">
+                                                    <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="feather icon-more-horizontal"></i>
+                                                    </button>
+                                                    <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                        <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                                        <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                        <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                                        <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            
+                                            
+                                            <div class="code-toolbar"><pre class="  language-markup"><code style="height:70%" class="json language-markup">rule WannaCry_Ransomware {
+   meta:
+      description = "Detects WannaCry Ransomware"
+      author = "Florian Roth (with the help of binar.ly)"
+      reference = "<a class="token url-link" href="https://goo.gl/HG2j5T">https://goo.gl/HG2j5T</a>"
+      date = "2017-05-12"
+      hash1 = "ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa"
+   strings:
+      $x1 = "icacls . /grant Everyone:F /T /C /Q" fullword ascii
+      $x2 = "taskdl.exe" fullword ascii
+      $x3 = "tasksche.exe" fullword ascii
+      $x4 = "Global\\MsWinZonesCacheCounterMutexA" fullword ascii
+      $x5 = "<a class="token email-link" href="mailto:WNcry@2ol">WNcry@2ol</a>7" fullword ascii
+      $x6 = "www.iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com" ascii
+      $x7 = "mssecsvc.exe" fullword ascii
+      $x8 = "C:\\%s\\qeriuwjhrf" fullword ascii
+      $x9 = "icacls . /grant Everyone:F /T /C /Q" fullword ascii
+
+      $s1 = "C:\\%s\\%s" fullword ascii
+      $s2 = " " fullword ascii
+      $s3 = "cmd.exe /c \"%s\"" fullword ascii
+      $s4 = "msg/m_portuguese.wnry" fullword ascii
+      $s5 = "\\\\192.168.56.20\\IPC$" fullword wide
+      $s6 = "\\\\172.16.99.5\\IPC$" fullword wide
+
+      $op1 = { 10 ac 72 0d 3d ff ff 1f ac 77 06 b8 01 00 00 00 }
+      $op2 = { 44 24 64 8a c6 44 24 65 0e c6 44 24 66 80 c6 44 }
+      $op3 = { 18 df 6c 24 14 dc 64 24 2c dc 6c 24 5c dc 15 88 }
+      $op4 = { 09 ff 76 30 50 ff 56 2c 59 59 47 3b 7e 0c 7c }
+      $op5 = { c1 ea 1d c1 ee 1e 83 e2 01 83 e6 01 8d 14 56 }
+      $op6 = { 8d 48 ff f7 d1 8d 44 10 ff 23 f1 23 c1 }
+   condition:
+      uint16(0) == 0x5a4d and filesize &lt; 10000KB and ( 1 of ($x*) and 1 of ($s*) or 3 of ($op*) )
+}</code></pre><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        
+                                        
+                                    </div>
+                                </div>
+                           <!-- [ sample-page ] end -->
+                        </div>
+                        <!-- [ Main Content ] end -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- [ Main Content ] end -->
+      <!-- Warning Section Starts -->
+      <!-- Older IE warning message -->
+      <!--[if lt IE 11]>
+      <div class="ie-warning">
+         <h1>Warning!!</h1>
+         <p>You are using an outdated version of Internet Explorer, please upgrade
+            <br/>to any of the following web browsers to access this website.
+         </p>
+         <div class="iew-container">
+            <ul class="iew-download">
+               <li>
+                  <a href="http://www.google.com/chrome/">
+                     <img src="static/images/browser/chrome.png" alt="Chrome">
+                     <div>Chrome</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://www.mozilla.org/en-US/firefox/new/">
+                     <img src="static/images/browser/firefox.png" alt="Firefox">
+                     <div>Firefox</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://www.opera.com">
+                     <img src="static/images/browser/opera.png" alt="Opera">
+                     <div>Opera</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="https://www.apple.com/safari/">
+                     <img src="static/images/browser/safari.png" alt="Safari">
+                     <div>Safari</div>
+                  </a>
+               </li>
+               <li>
+                  <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                     <img src="static/images/browser/ie.png" alt="">
+                     <div>IE (11 & above)</div>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <p>Sorry for the inconvenience!</p>
+      </div>
+      <![endif]-->
+      <!-- Warning Section Ends -->
+      <!-- Required Js -->
+      <script src="static/js/vendor-all.min.js"></script>
+      <script src="static/plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="static/js/pcoded.min.js"></script>
+      <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/plugins/prism/js/prism.min.js"></script>
+      <script src="https://codedthemes.com/demos/admin-templates/datta-able/bootstrap/assets/plugins/fileupload/js/dropzone-amd-module.min.js"></script>
+   </body>
+</html>

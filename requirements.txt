@@ -1,0 +1,10 @@
+flask 
+flask_mail
+pefile
+ssdeep
+pyexifinfo
+whois
+beautifulsoup4
+peutils
+virustotal_python
+yara-python

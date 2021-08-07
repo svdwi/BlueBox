@@ -1,0 +1,51 @@
+<html lang="en">  
+
+
+ {% include 'includes/head.html' %}  
+
+ 
+<body> 
+    <div class="auth-wrapper  ">
+        <div class="auth-content">
+            <div class="text-white">
+                <div class="card-body text-center">
+                    <div class="mb-4">
+                       <i class="feather icon-box f-50 "></i>              
+					   </div>
+						<h3 class="mb-1 text-white">BlueBox </h3>
+						<h6 class="mb-4 text-white">Cyber threat Hunting & Malware Analysis Box </h6>
+												<form action="" method="POST">
+
+						<div class="input-group mb-3">
+						
+							<input type="text" class="form-control" name="email"  placeholder="email">
+							</div>
+									<div class="input-group mb-2">
+									<input type="password" class="form-control" name="password" placeholder="password">
+									</div>	
+ <center>									
+
+<small style="color:pink" class=" form-text "> {{error_msg}} </small>	</center>
+
+ 
+									<div class="form-group text-left">
+									<div class="checkbox checkbox-fill d-inline">
+										<input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
+										<label for="checkbox-fill-a1" class="cr"> Save credentials</label><p class="mb-0 text-muted">Don’t have an account? <a href="/register" style="color:rgb(87, 85, 85)">Signup</a></p>
+									</div>
+								</div>
+				<input type="submit" value="Login" class="btn btn-outline-light" title="" data-toggle="tooltip" data-original-title="btn btn-outline-light" />              
+
+			</form>
+				</div>				
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Required Js -->
+    <script src="/static/js/vendor-all.min.js"></script>
+	<script src="/static/plugins/bootstrap/js/bootstrap.js"></script>
+    <script src="/static/js/pcoded.min.js"></script>
+
+</body></html>
