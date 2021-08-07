@@ -2,7 +2,7 @@
 
 
 
-<img src="logo_bluebox.png"  width=547 height=250 alt="BlueBox"/>
+<img src="images/logo_bluebox.png"  width=547 height=250 alt="BlueBox"/>
 
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/svdwi?style=social)](https://twitter.com/aziz_saadaoui)
@@ -46,6 +46,6 @@ BlueBox is an Open Source Intelligence, or OSINT solution to get threat intellig
 ![Documentation Status](https://readthedocs.org/projects/intelowl/badge/?version=latest) 
 
 
-<img src="architecture.png"  alt="BlueBox"/>
+<img src="images/architecture.png"  alt="BlueBox"/>
 
 
