@@ -19,6 +19,10 @@
 BlueBox is an Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain ,Url and analyze them.
 
 
+##Usage 
+`edit conf.py`
+`Python3 app.py`
+
 ## VIDEO USAGE
 
 <a href="https://drive.google.com/file/d/1FxDkz2h4jldsEU8QTL0uFaJSZFSI8XZ-/preview" title="BlueBox Usage"><img src="images/bluebox.png" alt="Cyber threat Hunting & Malware Analysis" /></a>
