@@ -210,4 +210,3 @@ class extract_data():
         result = "1" if site else "-1"
         return result
 
-#print(extract_data("https://facebook.com").indexGoogle())
