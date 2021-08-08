@@ -1,15 +1,6 @@
 from subprocess import *
 
 
-"""
-check signateur file 
-from signaturecheck import signateur
-s = signateur("file.exe")
-s.check_signateur()
-
-python3
-
-"""
 
 
 
@@ -50,9 +41,5 @@ class signateur():
 			if "Corrupt PE file" in output:
 				results["corrupted"]= True
 		return results
-
-
-#print(signateur("1002.exe").check_signateur())
-
 
 
