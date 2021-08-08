@@ -126,11 +126,3 @@ class  yaraScan():
 
 
 
-
-#h = yaraScan("/home/svdwi/ANSI_ANALYSER/script_Analyzers/Malwares/1002.exe")
-#h = h.results()
-#print(h)
-#if  next(iter(h.values()))=="None":
-#	print("not malware")
-#else: 
-#	print("is malware")
