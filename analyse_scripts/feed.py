@@ -1,29 +1,6 @@
 import requests
 import json
 
-#curl -X POST https://threatfox-api.abuse.ch/api/v1/ -d '{ "query": "search_ioc", "search_term": "139.180.203.104" }'     
-#post_data = f'{{ "query": "get_iocs", "days": 1 }}'
-#post_data2 = f'{{ "query": "search_ioc", "search_term": "139.180.203.104" }}'
-#{ "query": "malwareinfo", "malware": "Cobalt Strike", "limit": 10 }
-
-"""
-
-
-"ioc": "gaga.com",
-"threat_type": "botnet_cc",
-"threat_type_desc": "Indicator that identifies a botnet command&control server (C&C)",
-"ioc_type_desc": "Domain that is used for botnet Command&control (C&C)",
-"malware": "win.dridex",
-"malware_printable": "Dridex",
-"malware_alias": null,
-"confidence_level": 50,
-"first_seen": "2020-12-08 13:36:27 UTC",
-"tags": [
-"exe",
-"test"
-
-
-"""
 
 class ThreatFoxFeeds():
 
@@ -63,16 +40,4 @@ class ThreatFoxFeeds():
                 
 
 
-
- 
-"""
-feed = ThreatFoxFeeds().fetch_Malware(1)
-for i in range(len(feed)):
-    print(feed[i]["id"]) 
-    print(feed[i]["ioc"])
-    print(feed[i]["malware"])
-
-"""
-
-#print(ThreatFoxFeeds().fetch_Malware("rat"))
 
