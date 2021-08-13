@@ -39,7 +39,6 @@ BlueBox is an Open Source Intelligence, or OSINT solution to get threat intellig
 
 
 ## BlueBox Architecture
-Blue
 <img src="images/architecture.png"  alt="BlueBox"/>
 
 
