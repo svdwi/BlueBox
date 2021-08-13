@@ -13,18 +13,14 @@
 
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/svdwi)
 
+## What is it?
 
-# Description
- - **Threat intelligence data** about a malware, an IP or a domain , URL ? a Quick Analysis suspicious File or Malware ! 
-
-
-
-# What is it?
-
-- BlueBox is an Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain ,Url and analyze them.
+ **Threat intelligence data** about a malware, an IP or a domain , URL ? a Quick Analysis suspicious File or Malware ! 
+ 
+BlueBox is an Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain ,Url and analyze them.
 
 
-# what is included ?? / Features
+## what is included ?? / Features
 
 - Provides enrichment of threat intel for malware as well as observables (IP, Domain, URL and hash).
 - This application is built to **scale out** and to **speed up the retrieval of threat info**.
@@ -42,20 +38,20 @@
 
 
 
-# BlueBox Architecture
+## BlueBox Architecture
 Blue
 <img src="images/architecture.png"  alt="BlueBox"/>
 
 
 
-# VIDEO USAGE
+## VIDEO USAGE
 
 <a href="https://drive.google.com/file/d/1FxDkz2h4jldsEU8QTL0uFaJSZFSI8XZ-/preview" title="BlueBox Usage"><img src="images/bluebox.png" alt="Cyber threat Hunting & Malware Analysis" /></a>
 
 
 
 
-# Setting up 
+## Setting up 
 
 Clone the repo : 
 
