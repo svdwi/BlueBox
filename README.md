@@ -15,13 +15,13 @@
 
 
 # Description
- **threat intelligence data** about a malware, an IP or a domain , URL ? a Quick Analysis suspicious File or Malware ! 
+ - **Threat intelligence data** about a malware, an IP or a domain , URL ? a Quick Analysis suspicious File or Malware ! 
 
 
 
 # What is it?
 
-BlueBox is an Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain ,Url and analyze them.
+- BlueBox is an Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain ,Url and analyze them.
 
 
 # what is included ?? / Features
@@ -55,13 +55,18 @@ Blue
 
 
 
-# How To Run !! 
-First Change the `conf.py`  to receive authentication keys : 
+# Setting up 
 
-    vim conf.py
-    pip3 -r requements.txt
-    pip3 -r req.txt #if there a issues in ssdeep
-    python3 app.py 
+Clone the repo : 
 
+    $ git clone https://github.com/svdwi/BlueBox.git
+    $ cd BlueBox
+
+ Change the `conf.py`  to receive authentication keys 
+
+    $ vim conf.py
+    $ pip3 -r requements.txt
+    $ pip3 -r req.txt #if there a issues in ssdeep
+    $ python3 app.py 
 
 
