@@ -32,18 +32,9 @@ First Change the `conf.py`  to receive authentication keys :
     pip3 -r req.txt #if there a issues in ssdeep
     python3 app.py 
 
-## VIDEO USAGE
-
-<a href="https://drive.google.com/file/d/1FxDkz2h4jldsEU8QTL0uFaJSZFSI8XZ-/preview" title="BlueBox Usage"><img src="images/bluebox.png" alt="Cyber threat Hunting & Malware Analysis" /></a>
 
 
-
-## BlueBox Architecture
-Blue
-<img src="images/architecture.png"  alt="BlueBox"/>
-
-
-### what is included ?? /Features
+# what is included ?? /Features
 
 - Provides enrichment of threat intel for malware as well as observables (IP, Domain, URL and hash).
 - This application is built to **scale out** and to **speed up the retrieval of threat info**.
@@ -60,5 +51,16 @@ Blue
 
 
 
+
+
+# BlueBox Architecture
+Blue
+<img src="images/architecture.png"  alt="BlueBox"/>
+
+
+
+# VIDEO USAGE
+
+<a href="https://drive.google.com/file/d/1FxDkz2h4jldsEU8QTL0uFaJSZFSI8XZ-/preview" title="BlueBox Usage"><img src="images/bluebox.png" alt="Cyber threat Hunting & Malware Analysis" /></a>
 
 
