@@ -52,7 +52,7 @@ First Change the `conf.py`  to receive authentication keys :
 
 ## BlueBox Architecture
 
-![Documentation Status](https://readthedocs.org/projects/intelowl/badge/?version=latest) 
+![Documentation Status]() 
 
 
 <img src="images/architecture.png"  alt="BlueBox"/>
