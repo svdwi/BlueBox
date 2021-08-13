@@ -24,17 +24,7 @@
 BlueBox is an Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain ,Url and analyze them.
 
 
-# How To Run !! 
-First Change the `conf.py`  to receive authentication keys : 
-
-    vim conf.py
-    pip3 -r requements.txt
-    pip3 -r req.txt #if there a issues in ssdeep
-    python3 app.py 
-
-
-
-# what is included ?? /Features
+# what is included ?? / Features
 
 - Provides enrichment of threat intel for malware as well as observables (IP, Domain, URL and hash).
 - This application is built to **scale out** and to **speed up the retrieval of threat info**.
@@ -52,7 +42,6 @@ First Change the `conf.py`  to receive authentication keys :
 
 
 
-
 # BlueBox Architecture
 Blue
 <img src="images/architecture.png"  alt="BlueBox"/>
@@ -62,5 +51,17 @@ Blue
 # VIDEO USAGE
 
 <a href="https://drive.google.com/file/d/1FxDkz2h4jldsEU8QTL0uFaJSZFSI8XZ-/preview" title="BlueBox Usage"><img src="images/bluebox.png" alt="Cyber threat Hunting & Malware Analysis" /></a>
+
+
+
+
+# How To Run !! 
+First Change the `conf.py`  to receive authentication keys : 
+
+    vim conf.py
+    pip3 -r requements.txt
+    pip3 -r req.txt #if there a issues in ssdeep
+    python3 app.py 
+
 
 
