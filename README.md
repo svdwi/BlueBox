@@ -1,3 +1,4 @@
+
 # BlueBox Malware analysis Box and Cyber threat Hunting
 
 
@@ -13,15 +14,18 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/svdwi)
 
 
-# About bluebox
+# Description
  **threat intelligence data** about a malware, an IP or a domain , URL ? a Quick Analysis suspicious File or Malware ! 
 
 BlueBox is an Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain ,Url and analyze them.
 
 
-## RUN APP
-`edit conf.py`
-`Python3 app.py`
+## How To Run !! 
+First Change the `conf.py`  to receive authentication keys : 
+
+    vim conf.py
+    pip3 -r requements.txt
+    pip3 -r req.txt #if there a issues in ssdeep 
 
 ## VIDEO USAGE
 
