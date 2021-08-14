@@ -60,8 +60,8 @@ Clone the repo :
  Change the `conf.py`  to receive authentication keys 
 
     $ vim conf.py
-    $ pip3 -r requements.txt
-    $ pip3 -r req.txt #if there a issues in ssdeep
+    $ pip3 install -r requements.txt
+    $ pip3 install -r req.txt #if there a issues in ssdeep
     $ python3 app.py 
 
 
