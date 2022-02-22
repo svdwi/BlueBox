@@ -8,3 +8,4 @@ beautifulsoup4
 peutils
 virustotal_python
 yara-python
+python-whois
