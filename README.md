@@ -61,7 +61,7 @@ Clone the repo :
 
     $ vim conf.py
     $ pip3 install -r requements.txt
-    $ pip3 install -r req.txt #if there a issues in ssdeep
+    $ req.txt #if there a issues in ssdeep
     $ python3 app.py 
 
 
