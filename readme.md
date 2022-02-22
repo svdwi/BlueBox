@@ -1,6 +1,3 @@
-
-@ -1,67 +0,0 @@
-
 # BlueBox Malware analysis Box and Cyber threat Hunting
 
 
