@@ -17,31 +17,29 @@ from flask_login import login_required, current_user, login_user, logout_user
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import ImmutableMultiDict
 
-from analyse_scripts.foo import * 
-from analyse_scripts.feed  import * 
-from Yarascan import * 
-from lexical import * 
-from analyse_scripts.urltotal import * 
-from strings_all.check_strings import *  
-from analyse_scripts.Calls_Strings import * 
-from analyse_scripts.signaturecheck import *
-from analyse_scripts.FI_GetInfo import FileInfo  
-from analyse_scripts.Pe_GetInfo import PEInfo
-from analyse_scripts.models import UserModel,db,login,keymodel,MalFilesModel,MalUrlsModel
+from App.CheckMLUrl import * 
+from App.ThreatFoxFeeds  import * 
+from App.Yarascan import * 
+from App.CheckLexical import * 
+from App.urltotal import * 
+from App.SuspiciousStrings.check_strings import *  
+from App.SuspiciousDLL import * 
+from App.signaturecheck import *
+from App.FilesHashes import FileInfo  
+from App.Pe_GetInfo import PEInfo
+from App.models import UserModel,db,login,keymodel,MalFilesModel,MalUrlsModel
 
 
 
 
 app = Flask(__name__, template_folder='templates' ,static_url_path='/static') 
-UPLOAD_FOLDER = 'BlueBox//uploads//'
-YARATEST = 'yarascripts//yaragen//YaraGenerator//test//'
-ALLOWED_EXTENSIONS = set(['exe', 'bin'])
+
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['YARA_TEST'] = YARATEST
 #app.config['SERVER_NAME'] = "Threat.BlueBox:5000"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'Developed_BY_azizsaadaoui(svdwi)'
+app.secret_key = 'Developed_by_aziz_saadaoui(svdwi) (unfinished project)'
 db.init_app(app)
 login.init_app(app)
 login.login_view = 'login'
@@ -50,13 +48,12 @@ login.login_view = 'login'
 
 """
 Configuration SMTP SERVER
-
 """
 mail= Mail(app)
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = email
-app.config['MAIL_PASSWORD'] = passwd
+app.config['MAIL_USERNAME'] = EMAIL
+app.config['MAIL_PASSWORD'] = PASSWD
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -86,7 +83,7 @@ def generate_random_key():
 			mail.send(msg)
 		except:	
 			pass 
-		f  = open("AUTH_KEYS/keys.txt", "w+")
+		f  = open("Keys/keys.txt", "w+")
 		f.write(auth_keys)
 	else: 
 		pass
@@ -256,7 +253,7 @@ def Profile_Settings():
         return redirect('/login')
 
     
-    return render_template('sample-page.html')
+    return render_template('profile.html')
  
     
        
