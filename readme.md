@@ -1,6 +1,3 @@
-
-@ -1,67 +0,0 @@
-
 # BlueBox Malware analysis Box and Cyber threat Hunting
 
 
@@ -59,7 +56,7 @@ Clone the repo :
     $ git clone https://github.com/svdwi/BlueBox.git
     $ cd BlueBox
 
- Change the `conf.py`  to receive authentication keys 
+ Change the `conf.py`  to receive authentication keys or found in Keys/Keys.txt 
 
     $ vim conf.py
     $ chmod +x steup.sh
