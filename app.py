@@ -33,13 +33,13 @@ from App.models import UserModel,db,login,keymodel,MalFilesModel,MalUrlsModel
 
 
 app = Flask(__name__, template_folder='templates' ,static_url_path='/static') 
-
+#(_unfinished project_)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['YARA_TEST'] = YARATEST
 #app.config['SERVER_NAME'] = "Threat.BlueBox:5000"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db/data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.secret_key = 'Developed_by_aziz_saadaoui(svdwi) (unfinished project)'
+app.secret_key = 'tXkjA3CrTigbZuMeBkHqUW4EEimo6p54'
 db.init_app(app)
 login.init_app(app)
 login.login_view = 'login'
