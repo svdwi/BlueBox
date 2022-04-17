@@ -210,7 +210,7 @@ def allowed_file(filename):
 @login_required
 def results_file():
         filename = "WannaCry_Ransomware.exe" 
-        filepath = "/home/svdwi/ANSI_ANALYSER/script_Analyzers/WannaCry_Ransomware.exe" 
+        filepath = "./ANSI_ANALYSER/script_Analyzers/WannaCry_Ransomware.exe" 
         calls = calls_nd_strings(filepath).run()
         yaradetect = yaraScan(filepath).results()
         #createYara("Malware Detect By BlueBox v0.1","exe","BlueBox-Analysis-Box","malicous File","APT")
