@@ -213,8 +213,7 @@ def results_file():
         filepath = "./ANSI_ANALYSER/script_Analyzers/WannaCry_Ransomware.exe" 
         calls = calls_nd_strings(filepath).run()
         yaradetect = yaraScan(filepath).results()
-        #createYara("Malware Detect By BlueBox v0.1","exe","BlueBox-Analysis-Box","malicous File","APT")
-        #signa = signateur(filepath).check_signateur()
+
         Hashes_Data = FileInfo(filepath).run()
         st = strings_all(filepath)
         strings = st.unicode_strings()
@@ -297,8 +296,6 @@ def scan_file():
 			#print(filepath)
 			calls = calls_nd_strings(filepath).run()
 			yaradetect = yaraScan(filepath).results()
-			# generate yara rule file is work but we not add it to the backend 
-			# createYara("Malware Detect By BlueBox v0.1","exe","BlueBox-Analysis-Box","malicous File","APT")
 			signa = signateur(filepath).check_signateur()
 			Hashes_Data = FileInfo(filepath).run()
 			
